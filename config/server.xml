@@ -1,0 +1,33 @@
+<ocsigen>
+  <server>
+    <!-- Listening port -->
+    <port>8080</port>
+    
+    <logdir>run/log</logdir>
+    <datadir>run/data</datadir>
+    <commandpipe>run/tmp/cmd</commandpipe>
+
+    <charset>utf-8</charset>
+
+    <extension findlib-package="ocsigenserver.ext.staticmod"/>
+
+    <!-- Ocsipersist backend: dbm or sqlite -->
+    <!-- <extension findlib-package="ocsigenserver.ext.ocsipersist-sqlite"/> -->
+    <extension findlib-package="ocsigenserver.ext.ocsipersist-dbm"/>
+
+    <extension findlib-package="eliom.server"/>
+
+    <!-- Add other required ocamlfind packages here -->
+    <!-- <extension findlib-package="batteries"/> -->
+    <!-- ... -->
+
+    <host hostfilter="*">
+      <static dir="static" />
+      <eliommodule module="_build/app/server/hello.cma" />
+      <eliom/>
+    </host>
+
+    <!-- Debug mode -->
+    <debugmode />
+  </server>
+</ocsigen>
