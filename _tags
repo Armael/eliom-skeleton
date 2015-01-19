@@ -1,4 +1,4 @@
-<{config,static,log,data}>: -traverse
+<{config,static,run}>: -traverse
 
 true: thread, debug
 <app/*.{ml,mli,eliom,eliomi}>: syntax(camlp4o)
