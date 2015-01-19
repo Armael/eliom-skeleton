@@ -1,6 +1,7 @@
 all: build
 
 run: build
+	mkdir -p run/log run/data run/tmp
 	ocsigenserver -v -c config/server.xml
 
 browse:
@@ -17,4 +18,7 @@ clean:
 	rm -f static/hello.js
 	ocamlbuild -clean
 
-.PHONY: all run build clean
+distclean: clean
+	rm -rf run/
+
+.PHONY: all run build clean distclean
