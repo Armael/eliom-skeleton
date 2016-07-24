@@ -1,7 +1,7 @@
-{shared{
+[%%shared
   open Eliom_content.Html5.D
   open Eliom_lib.Lwt_ops
-}}
+]
 
 module Hello_app = Eliom_registration.App (
   struct

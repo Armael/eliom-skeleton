@@ -1,0 +1,6 @@
+B _build/app/server
+PKG js_of_ocaml.ocamlbuild
+PKG eliom
+PKG eliom.server
+PKG eliom.ppx
+PKG eliom.ppx.server

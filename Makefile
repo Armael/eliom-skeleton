@@ -9,7 +9,7 @@ browse:
 	make server
 
 build:
-	ocamlbuild -use-ocamlfind -plugin-tags 'package(eliom.ocamlbuild)' app/server/hello.cma app/server/hello.cmxs app/client/hello.js
+	ocamlbuild -use-ocamlfind -plugin-tags 'package(js_of_ocaml.ocamlbuild)' app/server/hello.cma app/server/hello.cmxs app/client/hello.js
 	@ln -sf ../_build/app/client/hello.js static/hello.js
 
 clean:

@@ -1,6 +1,6 @@
 <{config,static,run}>: -traverse
 
 true: thread, debug
-<app/*.{ml,mli,eliom,eliomi}>: syntax(camlp4o)
+<app/*.{eliom,eliomi}>: eliom_ppx
 <app/server/*>: package(eliom.server)
 <app/client/*>: package(eliom.client)
